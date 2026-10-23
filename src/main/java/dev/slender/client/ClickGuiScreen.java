@@ -40,7 +40,7 @@ public final class ClickGuiScreen extends Screen {
 
     @Override
     public void render(DrawContext ctx, int mouseX, int mouseY, float delta) {
-        renderBackground(ctx, mouseX, mouseY, delta);
+        // Draw our own background; don't trigger Minecraft's blur effect.
 
         ctx.fill(0, 0, width, height, 0xA8050710);
         ctx.fill(left + 4, top + 5, left + widthPanel + 4,
