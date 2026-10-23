@@ -15,7 +15,7 @@ public final class HudOverlay {
             if (client.player == null || client.world == null) return;
 
             double scale = mod.sliders().getOrDefault("HUD scale", 1.0);
-            context.getMatrices().push();
+            context.getMatrices().pushMatrix();
             context.getMatrices().scale((float)scale, (float)scale);
             int x = 8, y = 8;
             context.fill(x, y, x + 146, y + 46, 0xC90A0D16);
@@ -30,7 +30,7 @@ public final class HudOverlay {
             if (mod.toggles().getOrDefault("Show FPS", true)) {
                 context.drawText(client.textRenderer, "FPS  " + client.getCurrentFps(), x + 9, line, 0xFF9AA9C0, false);
             }
-            context.getMatrices().pop();
+            context.getMatrices().popMatrix();
         });
     }
 }
