@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "slenderclient",
+  "version": "${version}",
+  "name": "Slender Client",
+  "description": "A customizable client-side Fabric GUI and HUD starter.",
+  "authors": ["You"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.slender.client.SlenderClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
